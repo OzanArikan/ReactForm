@@ -1,8 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+//import logo from './logo.svg';
 import './App.css';
+//import User from "./components/User";
+import NavBar from "./components/NavBar";
+import Users from "./components/Users";
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +24,21 @@ function App() {
       </header>
     </div>
   );
+}*/
+
+class App extends Component {
+
+  
+  render() {
+
+    return (
+      <div className="container">
+        <NavBar title="Kullanıcı Ekleme Formu" />
+        <Users users={this.state.users} />
+        <hr/>
+      </div>
+    );
+  }
 }
 
 export default App;
